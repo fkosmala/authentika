@@ -1,0 +1,20 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<p>You are successfully identified, you can upload your file to generate the authentification certificate :</p>
+<form action="{{ url_for('getcert') }}" method="post" enctype="multipart/form-data">
+  <div class="row">
+    <div class="column">
+      <label for="filecert"> Upload your file:</label>
+      <input type="file" id="filecert" name="filecert">
+      <input id="code" name="code" type="hidden" value="{{ code }}">
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="column center">
+      <input class="button button-primary" type="submit" value="Send">
+    </div>
+  </div>
+</form>
+{% endblock %}

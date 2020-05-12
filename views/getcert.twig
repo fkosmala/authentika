@@ -1,0 +1,14 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<div class="center">
+  <h2>Genuine Certificate</h2>
+  {% if error == true %}<div class="error">Cannot send your mail ! Please save this page !</div>{% endif %}
+  <p>Your file is now authenticated on the HIVE Blockchain. You can print this page or save in PDF.</p>
+  <p>Id on blockhain : {{ tx }}.</p>
+  <a class="button button-large" target="_blank" href="https://hiveblocks.com/tx/{{ tx }}">See it on Hive.blocks</a>
+  <p>SHA-512 signature : {{ sign }}</p>
+  <h3>Certificate Content</h3>
+  <div style="background:#EEE;word-break: break-all;font-family: monospace">{{ cert }}</div>
+</div>
+{% endblock %}

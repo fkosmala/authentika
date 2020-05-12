@@ -1,0 +1,22 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<p>Please verify your identity with your mail & code (in the mail you've receive) :</p>
+<form action="{{ url_for('upload') }}" method="post">
+  <div class="row">
+    <div class="column">
+      <label for="email">Enter your email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div class="column">
+      <label for="email">Verify the cert code:</label>
+      <input type="number" id="code" name="code" {%if code !="" %}value="{{ code }}"{% endif %}/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column center">
+      <input class="button button-primary" type="submit" value="Send">
+    </div>
+  </div>
+</form>
+{% endblock %}

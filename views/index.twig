@@ -1,0 +1,35 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<div class="center">
+  <p>Authentika is a service allowing all creators of original content to authenticate their artistic works on the blockchain.</p>
+  <p>The latter has a legal value in relation to the principle of intellectual property governed by international law. In order to claim it, all you have to do is provide proof by means of this form. This tool is a way of associating a work with an identity but is by no means a complete legal approach. It is a step that allows the creation to be authenticated. For the rest, please refer to the different copyright laws in your respective countries.</p>
+  <p>By filling it in, you will generate a certificate which will be automatically registered on the network. This functionality is almost immediate, with no time limit, and is based on <a target="_blank" href="http://hive.io/">HIVE blockchain technology</a>. The Authentika and La Ruche team is in no way responsible for the use you make of it. </p>
+
+  <h2>How it works</h2>
+  <div class="row">
+    <div class="column">
+      <h3>Fill out the form</h3>
+      <img src="/assets/fillform.png" alt="fill the form">
+    </div>
+    <div class="column">
+      <h3>Check your mail</h3>
+      <img src="/assets/mail.png" alt="Check the mail">
+    </div>
+    <div class="column">
+      <h3>Upload your file</h3>
+      <img src="/assets/upload.png" alt="File upload">
+    </div>
+    <div class="column">
+      <h3>That's all !</h3>
+      <img src="/assets/certificate.png" alt="Get your certificate">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <a class="button button-large" href="{{ url_for('start') }}">Get your Blockchain Certificate</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

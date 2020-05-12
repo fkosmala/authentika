@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Authentika - Immortalize your creations</title>
+  <meta name="description" content="" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto&display=swap">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css">
+  <style media="screen">
+    .center {text-align: center;}
+    .button-large {font-size: 1.4rem;height: 4.5rem;line-height: 4.5rem;padding: 0 2rem;}
+    .success{background: #DEEBDD; border: 1px solid #BBDBBE; padding: 4%;}
+    .error{background: #FFBBBB; border: 1px solid #9E0837; padding: 4%;}
+    h1,h2{font-family: 'Press Start 2P', sans-serif;}
+    h1{font-size: 3.2rem}
+    h2{font-size: 2.5rem}
+    .button, .button-primary{border-color:#b1707b;background: rgb(177,112,123);background: radial-gradient(circle, rgba(177,112,123,1) 15%, rgba(167,109,119,1) 100%);}
+    a{color:#b1707b}
+  </style>
+</head>
+<body>
+  <div class="container">
+	   <div class="center">
+       <img class="center" src="/assets/authentika.png" alt="Logo Authentika" />
+     </div>
+    <h1 class="center">Authentika</h1>
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>
