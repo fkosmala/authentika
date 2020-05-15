@@ -34,6 +34,10 @@ Based on Slim4, the configuration for your webserver is avaiblable on [Slim 4 We
 
 Rename ```account.sample.json``` into ```account.json``` and edit this file to add your HIVE account and posting key.
 
+## Create two folders
+
+Create writeable folders ```certs/``` and ```uploads/``` at the root.
+
 ## Have Fun !
 
 That's all ! You can submit genuine certificate on the HIVE blockchain !
