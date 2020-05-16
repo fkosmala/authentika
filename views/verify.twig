@@ -1,0 +1,11 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<div class="center">
+  <h2>Verify your file </h2>
+  <h3>This page is not a certificate. It's only the verification page.</h3>
+  <p>SHA-512 CHECKSUM : {{ sign }}</p>
+  <p>The file is already deleted</p>
+  <a href="{{ url_for('index') }}">Return to homepage</a>
+</div>
+{% endblock %}

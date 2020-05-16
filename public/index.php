@@ -166,5 +166,22 @@ $app->post('/getcert', function ($request, $response, $args) {
 
 })->setName('getcert');
 
+$app->post('/verify', function ($request, $response, $args) {
+	$data = $request->getParsedBody();
+	$uploadedFiles = $request->getUploadedFiles();
+  $uploadedFile = $uploadedFiles['verify'];
+  if (!isset($uploadedFiles)) {
+    return $response->withHeader('Location', '/')->withStatus(302);
+  }
+  $dir = $this->get('upload_dir');
+  $uploadedFile->moveTo($dir.$uploadedFile->getClientFilename());
+  $hash = hash_file('sha512', $dir.$uploadedFile->getClientFilename());
+  unlink($dir.$uploadedFile->getClientFilename());
+  return $this->get('view')->render($response, 'verify.twig', [
+		"sign" => $hash,
+	]);
+  
+})->setName('verify');
+
 // Run app
 $app->run();
